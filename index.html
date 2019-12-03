@@ -9,47 +9,121 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-    <title>Resume's Phước</title>
+    <title>Phước's Resume</title>
     <style>
         /*body *{*/
         /*    border: 1px solid red;*/
         /*}*/
-        #gioithieu{
+        #gioithieu {
             padding-left: 30px;
+            padding-top: 10px;
         }
         .avt{
             margin: 10px 0px 10px 20px;
             border-radius: 8%;
             width: 100%;
         }
-        .abb{
+        .abb {
             background-color: rgb(244,245,240);
         }
 
-        #contact{
+        #contact {
             margin-top: 10px;
             padding-right: 25px;
         }
-        #body1{
+        #body1 {
             margin-top: 10px;
             padding: 20px;
         }
-        #exp, #degree, #time{
+        #exp, #degree {
             background-color: rgba(128,128,128,0.1);
         }
-        #exp i{
+        #exp i {
             float: right;
             margin-right: 30px;
         }
-        #degree i{
+        #degree i {
             float: right;
             margin-right: 30px;
         }
+
+        /*--------------avatar---------------*/
         .n {
             width: 100%;
             height: 250px;
             background-image: url(http://bit.ly/2qRnUFr);
-            border-radius: 8%;
+            background-repeat: no-repeat;
+        }
+        /*--------------hover progress par--------------*/
+        .progress-bar:hover{
+            background-color: chartreuse;
+            color: black;
+        }
+
+        /*----------------------CSS TIMELINE--------------------------*/
+
+        /*-------------- dọc--------------*/
+        .timeline ul li {
+            list-style-type: none;
+            position: relative;
+            width: 4px;
+            margin: 0 auto;
+            padding-top: 50px;
+            background: red;
+        }
+
+        /*--------------dấu chấm--------------*/
+        .timeline ul li::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            background: red;
+        }
+
+        /*--------------box content of timeline--------------*/
+        .timeline ul li div {
+            position: relative;
+            bottom: 0;
+            width: 400px;
+            padding: 15px;
+            background: #00CCFF;
+            box-shadow: 6px 6px 7px;
+        }
+
+        .timeline ul li div::before {
+            content: '';
+            position: absolute;
+            bottom: 7px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+
+        .timeline ul li:nth-child(odd) div {
+            left: 45px;
+        }
+
+        /*--------------color tam giác phải--------------*/
+        .timeline ul li:nth-child(odd) div::before {
+            left: -15px;
+            border-width: 8px 16px 8px 0;
+            border-color: transparent #00CCFF transparent transparent;
+        }
+
+        .timeline ul li:nth-child(even) div {
+            left: -439px;
+        }
+
+        /*--------------color tam giác trái--------------*/
+        .timeline ul li:nth-child(even) div::before {
+            right: -15px;
+            border-width: 8px 0 8px 16px;
+            border-color: transparent transparent transparent #00CCFF;
         }
     </style>
 </head>
@@ -88,7 +162,7 @@
 
                 <!--                            SKILLS-->
                 <div class="row">
-                    <div class="col-sm-12" style="text-align: center"><h3><b>SKILLS</b></h3></div>
+                    <div class="col-sm-12" ><h3><b>SKILLS</b></h3></div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12"><h4><b>PROFESSIONAL</b></h4></div>
@@ -252,6 +326,51 @@
                 <div class="container-fluid" id="body1">
                     <div class="row">
                         <div class="col-sm-12" id="exp"><h3><b>EXPERIENCE<i class="glyphicon glyphicon-briefcase"></i></b></h3></div>
+                        <br>
+                        <div class="col-sm-12">
+                            <br>
+                            <h4><b>SETUP WIN</b></h4>
+                            <section class="timeline">
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <time>1934</time>
+                                            Some content here
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <time>2018</time>
+                                            tao di hoc
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <time>2018</time>
+                                            tao di hoc
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <time>2018</time>
+                                            tao di hoc
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <time>2018</time>
+                                            tao di hoc
+                                        </div>
+                                    </li>
+
+                                    <!-- more list items here -->
+                                </ul>
+                            </section>
+
+                        </div>
                     </div>
                     <hr>
                     <div class="row">
@@ -267,7 +386,7 @@
                         </div>
                         <div class="col-sm-9">
                             <h4><b>Chứng chỉ đào tạo lập trình viên quốc tế Aptech</b></h4>
-                            <div>lập trình viên full-stack</div>
+                            <div>cùi bắp</div>
                         </div>
                         <div class="col-sm-3" style="text-align: center">
                             <div><b>2019-2022</b></div>
